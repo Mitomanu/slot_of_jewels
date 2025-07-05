@@ -8,6 +8,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const gameTitle = document.querySelector('.game-title');
     const skipIntroButton = document.getElementById('skip-intro');
+    
+    // Setează un timer pentru a ascunde butonul Skip Intro după 3 secunde
+    setTimeout(() => {
+        if (skipIntroButton) {
+            skipIntroButton.style.opacity = '0';
+            setTimeout(() => {
+                skipIntroButton.style.display = 'none';
+            }, 300); // Așteaptă finalizarea tranziției de opacitate
+        }
+    }, 3000);
+
+    // Simbolurile disponibile pentru benzi
+    const jewels = [
+        'ametist', 'piatra', 'cristal', 'diamant', 'rubin', 
+        'safir', 'topaz', 'gemstone', 'round_diamond'
+    ];
+
+    // Funcție pentru generarea simbolurilor pe benzi
+    function populateReels() {
+        const reels = document.querySelectorAll('.reel');
+        let scatterUsed = false;
+        let scatterReelIndex = Math.floor(Math.random() * 6); // Alege aleator o bandă pentru scatter
+        
+        reels.forEach((reel, reelIndex) => {
+            // Curăță banda
+            reel.innerHTML = '';
+            
+            // Generează 5 simboluri pentru fiecare bandă
+            for (let i = 0; i < 5; i++) {
+                const symbol = document.createElement('img');
+                
+                // Decide ce simbol să folosească
+                let symbolName;
+                if (reelIndex === scatterReelIndex && i === 2 && !scatterUsed) {
+                    // Pune scatter în mijlocul benzii alese
+                    symbolName = 'scatter';
+                    scatterUsed = true;
+                } else {
+                    // Alege un simbol aleator din jewels (fără scatter)
+                    symbolName = jewels[Math.floor(Math.random() * jewels.length)];
+                }
+                
+                // Setează atributele imaginii
+                symbol.src = `jewels/${symbolName}.png`;
+                symbol.alt = symbolName;
+                symbol.className = 'jewel-symbol';
+                
+                // Adaugă simbolul la bandă
+                reel.appendChild(symbol);
+            }
+        });
+    }
 
     // Funcție pentru a sări peste intro și a arăta jocul direct
     function skipIntro() {
@@ -64,6 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('visible');
         });
 
+        // Populează benzile cu simboluri
+        populateReels();
+
         // Restabilim tranzițiile după un moment
         setTimeout(() => {
             allElements.forEach(element => {
@@ -108,6 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         // După 2 secunde, schimbă fundalul și afișează titlul jocului
                         setTimeout(() => {
+                            // Asigură-te că butonul Skip Intro este ascuns
+                            if (skipIntroButton) {
+                                skipIntroButton.style.opacity = '0';
+                                skipIntroButton.style.display = 'none';
+                            }
+                            
                             // Schimbă fundalul la lightgrey
                             body.classList.add('light-background');
 
@@ -142,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                 gameInfoElements.forEach(element => {
                                     element.classList.add('visible');
                                 });
+
+                                // Populează benzile cu simboluri
+                                populateReels();
                             }, 500);
                         }, 2000);
                     }, lastLetterDelay + 5000); // 5 secunde după ce s-a terminat animația cu literele

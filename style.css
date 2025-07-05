@@ -49,6 +49,24 @@
     height: 750px;
     background-color: white;
     border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Stiluri pentru simbolurile din benzi */
+.jewel-symbol {
+    width: 85%; /* 85% din lățimea benzii (150px) = 127.5px */
+    height: 127.5px; /* 85% din 150px */
+    object-fit: contain;
+    filter: drop-shadow(0 0 3px blue);
+    transition: transform 0.3s ease-in-out;
+}
+
+.jewel-symbol:hover {
+    transform: scale(1.1);
 }
 
 /* Stiluri pentru butonul de spin */
