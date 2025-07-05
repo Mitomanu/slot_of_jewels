@@ -1,8 +1,8 @@
 /* Stiluri pentru butoanele de control */
 .control-button {
     position: fixed;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     z-index: 1000;
     background-color: transparent; /* Fundal transparent */
@@ -22,7 +22,7 @@
 /* Stiluri pentru container-ul benzilor */
 .reels-container {
     position: absolute;
-    top: calc(50px + 36px); /* 50px sub titlu (care are font-size de 36px) */
+    top: calc(20px + 36px); /* 20px sub titlu (care are font-size de 36px) */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -45,8 +45,8 @@
 
 /* Stiluri pentru benzile individuale */
 .reel {
-    width: 150px;
-    height: 750px;
+    width: 80px;
+    height: 400px;
     background-color: white;
     border-radius: 2px;
     display: flex;
@@ -73,7 +73,7 @@
 #spin-button {
     position: fixed;
     top: 50%;
-    right: 350px;
+    right: 250px;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 200;
@@ -88,8 +88,8 @@
 }
 
 #spin-button img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -179,5 +179,5 @@
 }
 
 #bet-display {
-    bottom: 15%;
+    bottom: 10%;
 }
