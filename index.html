@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALSOFT Intro</title>
+    <link rel="stylesheet" href="intro_style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'Anton';
+            src: url('fonts/Anton-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div id="skip-intro">SKIP INTRO</div>
+    <div class="game-title">
+        <h1>SLOT OF JEWELS</h1>
+    </div>
+
+    <!-- Buton fullscreen -->
+    <div id="fullscreen-button" class="control-button">
+        <img id="fullscreen-icon" src="buttons/fullscreen.png" alt="Fullscreen" class="icon">
+        <img id="exit-fullscreen-icon" src="buttons/exit_fullscreen.png" alt="Exit Fullscreen" class="icon">
+    </div>
+
+    <!-- Buton info -->
+    <div id="info-button" class="control-button">
+        <img src="buttons/info.png" alt="Info" class="icon">
+    </div>
+
+    <!-- Container pentru benzi -->
+    <div class="reels-container">
+        <div class="reel" id="reel1"></div>
+        <div class="reel" id="reel2"></div>
+        <div class="reel" id="reel3"></div>
+        <div class="reel" id="reel4"></div>
+        <div class="reel" id="reel5"></div>
+        <div class="reel" id="reel6"></div>
+    </div>
+
+    <!-- Buton spin -->
+    <div id="spin-button">
+        <img src="buttons/spin_button.png" alt="Spin">
+    </div>
+
+    <!-- Informații joc - credit și miză -->
+    <div id="credit-display" class="game-info">CREDIT <span id="credit-value">0</span></div>
+    <div id="bet-display" class="game-info">MIZĂ <span id="bet-value">0</span></div>
+
+    <div class="intro-container">
+        <div class="logo-container">
+            <div class="letter-container">
+                <img src="letters/A.png" alt="A" class="logo-letter">
+                <div class="l-i-container">
+                    <img src="letters/L.png" alt="L" class="logo-letter l-letter">
+                    <img src="letters/I.png" alt="I" class="logo-letter i-letter hidden">
+                </div>
+                <img src="letters/S.png" alt="S" class="logo-letter">
+                <img src="letters/O.png" alt="O" class="logo-letter">
+                <img src="letters/F.png" alt="F" class="logo-letter">
+                <img src="letters/T.png" alt="T" class="logo-letter">
+            </div>
+        </div>
+        <div class="presents-text">
+            <span class="presents-letter">p</span>
+            <span class="presents-letter">r</span>
+            <span class="presents-letter">e</span>
+            <span class="presents-letter">s</span>
+            <span class="presents-letter">e</span>
+            <span class="presents-letter">n</span>
+            <span class="presents-letter">t</span>
+            <span class="presents-letter">s</span>
+            <span class="presents-letter">.</span>
+            <span class="presents-letter">.</span>
+            <span class="presents-letter">.</span>
+        </div>
+    </div>
+
+    <script src="intro.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

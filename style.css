@@ -1,0 +1,165 @@
+/* Stiluri pentru butoanele de control */
+.control-button {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent; /* Fundal transparent */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Inițial ascunse */
+    visibility: hidden; /* Complet ascunse */
+}
+
+.control-button:hover {
+    background-color: transparent; /* Eliminat efectul de umbrire la hover */
+}
+
+/* Stiluri pentru container-ul benzilor */
+.reels-container {
+    position: absolute;
+    top: calc(50px + 36px); /* 50px sub titlu (care are font-size de 36px) */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    padding: 0 5px 5px 5px; /* Padding pentru borduri */
+    border-left: 8px solid blue;
+    border-right: 8px solid blue;
+    border-bottom: 8px solid blue;
+    background-color: transparent;
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.reels-container.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Stiluri pentru benzile individuale */
+.reel {
+    width: 150px;
+    height: 750px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Stiluri pentru butonul de spin */
+#spin-button {
+    position: fixed;
+    top: 50%;
+    right: 350px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#spin-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#spin-button img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#spin-button:hover img {
+    animation: spin-animation 2s linear infinite; /* Rotație continuă în sens invers acelor de ceasornic */
+}
+
+#spin-button.clicked img {
+    animation: none;
+    transform: rotate(0deg);
+}
+
+#fullscreen-button {
+    top: 20px;
+    right: 20px;
+}
+
+#info-button {
+    top: 20px;
+    left: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    /* Eliminăm filtrul invert, deoarece folosim imagini reale, nu SVG-uri */
+}
+
+/* Clasa pentru a face butoanele vizibile după intro */
+.control-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#exit-fullscreen-icon {
+    display: none; /* Ascuns inițial */
+}
+
+/* Stiluri pentru butonul Skip Intro */
+#skip-intro {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    z-index: 300; /* Deasupra altor elemente */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#skip-intro:hover {
+    text-decoration: underline;
+}
+
+/* Stiluri pentru informațiile despre credit și miză */
+.game-info {
+    position: fixed;
+    left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.game-info.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#credit-display {
+    bottom: 20%;
+}
+
+#bet-display {
+    bottom: 15%;
+}
