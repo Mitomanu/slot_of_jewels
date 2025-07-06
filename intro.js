@@ -119,6 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Populează benzile cu simboluri
         populateReels();
 
+        // NOTIFICĂ GAME.JS CĂ INTRO-UL S-A TERMINAT
+        if (typeof onIntroCompleted === 'function') {
+            onIntroCompleted();
+        }
+
         // Restabilim tranzițiile după un moment
         setTimeout(() => {
             allElements.forEach(element => {
@@ -206,6 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 // Populează benzile cu simboluri
                                 populateReels();
+                            
+                                // NOTIFICĂ GAME.JS CĂ INTRO-UL S-A TERMINAT
+                                if (typeof onIntroCompleted === 'function') {
+                                    onIntroCompleted();
+                                }
                             }, 500);
                         }, 2000);
                     }, lastLetterDelay + 5000); // 5 secunde după ce s-a terminat animația cu literele

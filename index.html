@@ -6,6 +6,8 @@
     <title>ALSOFT Intro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="intro_style.css">
+    <link rel="stylesheet" href="game_style.css">
+    <link rel="stylesheet" href="info/info.css">
 
     <style>
         @font-face {
@@ -30,8 +32,8 @@
     </div>
 
     <!-- Buton info -->
-    <div id="info-button" class="control-button">
-        <img src="buttons/info.png" alt="Info" class="icon">
+    <div id="info-button" class="control-button" draggable="false" ontouchstart="return false;">
+        <img src="buttons/info.png" alt="Info" class="icon" draggable="false">
     </div>
 
     <!-- Container pentru benzi -->
@@ -52,6 +54,10 @@
     <!-- Informații joc - credit și miză -->
     <div id="credit-display" class="game-info">CREDIT <span id="credit-value">0</span></div>
     <div id="bet-display" class="game-info">MIZĂ <span id="bet-value">0</span></div>
+
+    <!-- Mesaje pentru credit și bet -->
+    <div id="credit-message" class="game-message">INTRODUCEȚI CREDIT! APASAȚI &lt;C&gt;</div>
+    <div id="bet-message" class="game-message">MODIFICAȚI BET! APĂSAȚI &lt;B&gt;</div>
 
     <div class="intro-container">
         <div class="logo-container">
@@ -85,5 +91,6 @@
     <script src="settings.js"></script>
     <script src="intro.js"></script>
     <script src="game.js"></script>
+    <script src="info/info.js"></script>
 </body>
 </html>

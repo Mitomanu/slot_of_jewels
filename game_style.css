@@ -1,0 +1,28 @@
+/* Stiluri pentru mesajele de credit și bet */
+.game-message {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#credit-message {
+    color: red;
+}
+
+#bet-message {
+    color: blue;
+}
+
+.game-message.visible {
+    opacity: 1;
+    visibility: visible;
+}
