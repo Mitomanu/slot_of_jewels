@@ -114,6 +114,26 @@
     font-family: 'Anton', sans-serif;
 }
 
+.jewel-info-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.jewel-info-grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scatter-column {
+    grid-column: 3 / span 1;
+    grid-row: 3;
+}
+
 .game-rule {
     margin-top: 5px;
     padding: 0 30px;
@@ -154,322 +174,11 @@
     cursor: pointer;
 }
 
-.symbols-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 0 100px;
-}
-
 .jewel-symbol {
     width: 50px;
     height: 50px;
     object-fit: contain;
-    margin: 0 auto;
-}
-
-.symbols-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.symbols-row-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 230px;
-    left: 0;
-    right: 0;
-    padding: 0 50px;
-}
-
-.multiplier-text-13 {
-    position: absolute;
-    top: 283px;
-    left: 116px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-14 {
-    position: absolute;
-    top: 283px;
-    left: 320px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-15 {
-    position: absolute;
-    top: 283px;
-    left: 524px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-16 {
-    position: absolute;
-    top: 283px;
-    left: 728px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-17 {
-    position: absolute;
-    top: 283px;
-    left: 932px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-18 {
-    position: absolute;
-    top: 302px;
-    left: 116px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-19 {
-    position: absolute;
-    top: 302px;
-    left: 320px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-20 {
-    position: absolute;
-    top: 302px;
-    left: 524px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-21 {
-    position: absolute;
-    top: 302px;
-    left: 728px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-22 {
-    position: absolute;
-    top: 302px;
-    left: 932px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-23 {
-    position: absolute;
-    top: 321px;
-    left: 116px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-24 {
-    position: absolute;
-    top: 321px;
-    left: 320px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-25 {
-    position: absolute;
-    top: 321px;
-    left: 524px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-26 {
-    position: absolute;
-    top: 321px;
-    left: 728px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-27 {
-    position: absolute;
-    top: 321px;
-    left: 932px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-28 {
-    position: absolute;
-    top: 370px;
-    left: 480px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.scatter-symbol {
-    position: absolute;
-    top: 370px;
-    left: 535px;
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-
-.multiplier-text-29 {
-    position: absolute;
-    top: 389px;
-    left: 480px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-30 {
-    position: absolute;
-    top: 405px;
-    left: 480px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.symbols-container-2 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.multiplier-text-1 {
-    position: absolute;
-    top: 154px;
-    left: 185px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-2 {
-    position: absolute;
-    top: 154px;
-    left: 410px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-3 {
-    position: absolute;
-    top: 154px;
-    left: 635px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-4 {
-    position: absolute;
-    top: 154px;
-    left: 860px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-5 {
-    position: absolute;
-    top: 173px;
-    left: 185px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-6 {
-    position: absolute;
-    top: 173px;
-    left: 410px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-7 {
-    position: absolute;
-    top: 173px;
-    left: 635px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-8 {
-    position: absolute;
-    top: 173px;
-    left: 860px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-9 {
-    position: absolute;
-    top: 192px;
-    left: 189px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-10 {
-    position: absolute;
-    top: 192px;
-    left: 413px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-11 {
-    position: absolute;
-    top: 192px;
-    left: 638px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-}
-
-.multiplier-text-12 {
-    position: absolute;
-    top: 192px;
-    left: 863px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Anton', sans-serif;
+    margin: 15px 0;
 }
 
 /* Asigură-te că conținutul nu trece peste butonul de închidere */
