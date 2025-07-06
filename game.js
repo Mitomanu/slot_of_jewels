@@ -3,6 +3,8 @@ let gameCredit = 0;
 let gameBet = 0;
 let introCompleted = false; // Variabilă pentru a ști dacă intro-ul s-a terminat
 
+// Variabile folosite doar în acest fișier pentru acum
+
 // Referințe la elemente DOM
 const creditDisplay = document.getElementById('credit-value');
 const betDisplay = document.getElementById('bet-value');
@@ -41,6 +43,8 @@ function checkAndShowMessages() {
     }
 }
 
+// Această funcție va fi utilizată doar intern în joc
+
 // Funcție pentru adăugarea creditului
 function addCredit() {
     if (gameCredit < 10000) {
@@ -57,6 +61,9 @@ function addCredit() {
         });
     }
 }
+
+// Exportăm funcția pentru a o face disponibilă în engine.js
+window.addCredit = addCredit;
 
 // Funcție pentru modificarea bet-ului
 function modifyBet() {
@@ -81,6 +88,12 @@ function modifyBet() {
         });
     }
 }
+
+// Exportăm funcția pentru a o face disponibilă în engine.js
+window.modifyBet = modifyBet;
+
+// Vom implementa scăderea și creșterea creditului direct în butonul de spin
+// când vom dezvolta funcționalitatea completă a jocului
 
 // Funcție care se apelează când intro-ul se termină
 function onIntroCompleted() {

@@ -1,17 +1,20 @@
 /* Stiluri pentru mesajele de credit și bet */
 .game-message {
     position: fixed;
-    bottom: 50px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Anton', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    z-index: 300;
+    color: orange;
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+    z-index: 220;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    text-align: center;
+    width: 100%;
 }
 
 #credit-message {

@@ -1,20 +1,5 @@
-// Variabile pentru gestionarea creditului și mizei
-let credit = 0;
-let bet = 0;
-
-// Funcție pentru actualizarea afișării creditului și mizei
-function updateDisplay() {
-    const creditValueElement = document.getElementById('credit-value');
-    const betValueElement = document.getElementById('bet-value');
-
-    if (creditValueElement) {
-        creditValueElement.textContent = credit;
-    }
-
-    if (betValueElement) {
-        betValueElement.textContent = bet;
-    }
-}
+// Variabile pentru setări generale ale jocului
+// Variabilele pentru credit și miză sunt gestionate în game.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // Referințe la elementele DOM
@@ -75,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adaugă funcționalitate pentru butonul de spin
     const spinButton = document.getElementById('spin-button');
     if (spinButton) {
-        spinButton.addEventListener('click', () => {
+        // Funcția pentru a declanșa spin
+        const triggerSpin = function() {
             console.log('Buton spin apăsat');
             // Oprește animația de rotație
             spinButton.classList.add('clicked');
@@ -85,26 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 spinButton.classList.remove('clicked');
             }, 500);
 
-            // Verifică dacă mai sunt credite disponibile
-            if (credit <= 0) {
-                alert('Nu mai ai credite disponibile!');
-                return;
+            // Logica simplă de spin (fără funcționalitățile avansate ale motorului)
+            console.log('Funcția de spin va fi implementată mai târziu');
+        };
+
+        // Adaugă event listener pentru click
+        spinButton.addEventListener('click', triggerSpin);
+
+        // Adaugă event listener pentru spațiu și enter
+        spinButton.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                triggerSpin();
             }
-
-            // Verifică dacă există o miză setată
-            if (bet <= 0) {
-                alert('Setează o miză mai întâi!');
-                return;
-            }
-
-            // Scade miza din credit
-            credit -= bet;
-            updateDisplay();
-
-            // Aici vom adăuga logica pentru rotirea rolelor
         });
     }
 
-    // Inițializare afișare
-    updateDisplay();
+    // Inițializare joc complet gestionată de game.js
 });
