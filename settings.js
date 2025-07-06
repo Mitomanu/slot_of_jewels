@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Implementează aici acțiunea pentru butonul info
             console.log('Buton info apăsat');
             // Exemplu: afișează un modal cu informații
-            alert('Informații despre joc');
+            // alert('Informații despre joc');
         });
     }
 

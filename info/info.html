@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Pages</title>
+    <link rel="stylesheet" href="info.css" />
+  </head>
+  <body>
+    <div class="info-overlay" id="info-overlay">
+      <div class="info-container">
+        <img
+          src="../buttons/close.png"
+          alt="Închide"
+          class="close-button"
+          id="close-button"
+        />
+
+        <div class="info-content">
+          <!-- Page 1 - Symbol Information -->
+          <div class="info-page active" id="info-page-1">
+            <div class="info-title">INFORMAȚII JOC</div>
+
+            <div class="jewel-info-grid">
+              <!--          ROW 1-->
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/rubin.png"
+                  alt="rubin"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x100</div>
+                <div>10 - 11 x 25</div>
+                <div>8 - 9 x 10</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/cristal.png"
+                  alt="cristal"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x25</div>
+                <div>10 - 11 x 10</div>
+                <div>8 - 9 x 2.5</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/safir.png"
+                  alt="safir"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x15</div>
+                <div>10 - 11 x 5</div>
+                <div>8 - 9 x 2</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/round_diamond.png"
+                  alt="round_diamond"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x12</div>
+                <div>10 - 11 x 2</div>
+                <div>8 - 9 x 1.5</div>
+              </div>
+
+              <!--          ROW 2-->
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/piatra.png"
+                  alt="piatra"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x 10</div>
+                <div>10 - 11 x 1.5</div>
+                <div>8 - 9 x 1</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/topaz.png"
+                  alt="topaz"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x 8</div>
+                <div>10 - 11 x 1.2</div>
+                <div>8 - 9 x 0.8</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/ametist.png"
+                  alt="ametist"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x 5</div>
+                <div>10 - 11 x 1</div>
+                <div>8 - 9 x 0.5</div>
+              </div>
+
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/gemstone.png"
+                  alt="gemstone"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x 4</div>
+                <div>10 - 11 x 0.9</div>
+                <div>8 - 9 x 0.4</div>
+              </div>
+              <div class="jewel-info-grid-column">
+                <img
+                  src="../jewels/diamant.png"
+                  alt="diamant"
+                  class="jewel-symbol"
+                />
+                <div>12 - 30 x 2</div>
+                <div>10 - 11 x 0.75</div>
+                <div>8 - 9 x 0.25</div>
+              </div>
+
+              <!--          ROW 3-->
+              <div class="jewel-info-grid-column scatter-column">
+                <!-- Scatter symbol and values -->
+                <img
+                  src="../jewels/scatter.png"
+                  alt="scatter"
+                  class="jewel-symbol"
+                />
+                <div>6 x 100</div>
+                <div>5 x 5</div>
+                <div>4 x 3</div>
+              </div>
+            </div>
+
+            <img
+              src="../buttons/right-arrow.png"
+              alt="Pagina următoare"
+              class="right-arrow"
+              id="right-arrow-1"
+            />
+          </div>
+
+          <!-- Page 2 - Game Description and Rules -->
+          <div class="info-page inactive-right" id="info-page-2">
+            <div class="info-title">INFORMAȚII JOC</div>
+
+            <!-- Game Description -->
+            <div class="game-description">
+              <div class="gradient-text">SLOT OF JEWELS</div>
+              <div class="white-text">
+                este un slot cu 6 role a câte 5 simboluri reprezentate prin
+                simboluri giuvaier.
+              </div>
+            </div>
+
+            <!-- Game Rule Title -->
+            <div class="game-rule-title">REGULA JOCULUI</div>
+
+            <!-- Game Rule 1 -->
+            <div class="game-rule">
+              La apăsarea simbolului
+              <img
+                src="../buttons/spin_button.png"
+                alt="rotire"
+                class="spin-icon"
+              />
+              rolele se golesc de simboluri, în locul lor apărând alte
+              simboluri. Dacă pe role apar minimum 8 simboluri de același fel,
+              atunci avem un câștig, iar acele simboluri vor dispărea, iar în
+              locul lor vor cădea cele de deasupra, iar locurile rămase libere,
+              vor fi populate cu alte simboluri. Se va continua până când nu mai
+              există nicio variantă câștigătoare.
+            </div>
+
+            <!-- Game Rule 2 -->
+            <div class="game-rule">
+              Dacă într-o rotire, se câștigă consecutiv de 3 ori, atunci de la
+              al 4-lea câștig, se va acorda un multiplicator. Astfel de la al
+              4-lea câștig se va acorda un multiplicator de câștig +1 pentru
+              fiecare câștig. Când nu mai există câștig, valoarea
+              multiplicatorului se resetează la zero.
+            </div>
+
+            <!-- Free Spin Title -->
+            <div class="game-rule-title" style="margin-top: 30px">
+              FREE SPIN
+            </div>
+
+            <!-- Free Spin Rule -->
+            <div class="game-rule">
+              Când minimum 4 simboluri
+              <img
+                src="../jewels/scatter.png"
+                alt="scatter"
+                class="spin-icon"
+                style="width: 24px; height: 24px"
+              />
+              apar pe role, se vor declanșa 10 rotiri gratuite, în care la
+              fiecare câștig se va adăuga un multiplicator. Acești
+              multiplicatori vor rămâne activi până la finalul rotirilor.
+            </div>
+
+            <img
+              src="../buttons/left-arrow.png"
+              alt="Pagina anterioară"
+              class="left-arrow"
+              id="left-arrow-2"
+            />
+            <img
+              src="../buttons/right-arrow.png"
+              alt="Pagina următoare"
+              class="right-arrow"
+              id="right-arrow-2"
+            />
+          </div>
+
+          <!-- Page 3 - Game Instructions -->
+          <div class="info-page inactive-right" id="info-page-3">
+            <div class="info-title">INFORMAȚII JOC</div>
+
+            <div class="game-rule" style="margin-top: 30px">
+              Pentru a introduce CREDIT, apăsați tasta 'C'. Creditul maxim ce
+              poate fi introdus este de 10000
+            </div>
+
+            <div class="game-rule" style="margin-top: 20px">
+              Pentru a modifica MIZA, apăsați pe tasta 'B'. Miza maximă este 50.
+            </div>
+
+            <div class="game-rule" style="margin-top: 30px">
+              Pentru rotire apăsați simbolul
+              <img
+                src="../buttons/spin_button.png"
+                alt="spin"
+                class="spin-icon"
+              />
+            </div>
+
+            <div class="game-rule" style="margin-top: 10px">
+              Pentru fullscreen, apăsați simbolul
+              <img
+                src="../buttons/fullscreen.png"
+                alt="fullscreen"
+                class="spin-icon"
+              />
+              iar pentru revenire apăsați simbolul
+              <img
+                src="../buttons/exit_fullscreen.png"
+                alt="exit fullscreen"
+                class="spin-icon"
+              />
+            </div>
+
+            <div class="game-rule" style="margin-top: 10px">
+              Pentru a ajunge aici, apăsați pe
+              <img src="../buttons/info.png" alt="info" class="spin-icon" />
+              iar pentru închidere apăsați pe
+              <img src="../buttons/close.png" alt="close" class="spin-icon" />
+            </div>
+
+            <div class="game-rule" style="margin-top: 10px">
+              Pentru navigarea între pagini, apăsați simbolul
+              <img
+                src="../buttons/left-arrow.png"
+                alt="previous page"
+                class="spin-icon"
+              />
+              sau
+              <img
+                src="../buttons/right-arrow.png"
+                alt="next page"
+                class="spin-icon"
+              />.
+            </div>
+
+            <img
+              src="../buttons/left-arrow.png"
+              alt="Pagina anterioară"
+              class="left-arrow"
+              id="left-arrow-3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
